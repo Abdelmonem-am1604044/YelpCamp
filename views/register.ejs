@@ -1,0 +1,13 @@
+<% include partials/header%>
+
+<h1>Sign Up</h1>
+
+<form action="/register" method="post">
+    <label for="SignUsername">Username:</label>
+    <input type="text" id="SignUsername" name="username" placeholder="Username" required>
+    <label for="SignPassword">Password:</label>
+    <input type="password" name="password" id="SignPassword" placeholder="Password" required>
+    <input type="submit">
+</form>
+
+<% include partials/footer.ejs%>
