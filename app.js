@@ -13,8 +13,8 @@ var express = require('express'),
 
 
 app.set('view engine', 'ejs');
-// mongoose.connect("mongodb://localhost/yelpCamp_app", {useNewUrlParser: true});
-mongoose.connect("mongodb://abdelmonem:Iamtheblaster123@ds026898.mlab.com:26898/yelpcamp");
+mongoose.connect("mongodb://localhost/yelpCamp_app", {useNewUrlParser: true});
+// mongoose.connect("mongodb://abdelmonem:Iamtheblaster123@ds026898.mlab.com:26898/yelpcamp");
 
 app.use(methodOverride("_method"));
 app.use(bodyParser.urlencoded({extended: true}));
@@ -46,7 +46,7 @@ app.use('/campgrounds/:id/comments', commentsRouter);
 
 
 // Server Startup
-app.listen(4000     , function () {
+app.listen(4000, function () {
     console.log("YelpCamp Server Started");
 });
 

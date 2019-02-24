@@ -4,8 +4,8 @@ var express = require('express'),
     middleWare = require('../middleWare/index');
 
 // Index - CampGrounds
-router.get("/", function (req, res) {
-    Campground.find({}, function (err, campGrounds) {
+router.get("/", (req, res) => {
+    Campground.find({}, (err, campGrounds) => {
         res.render("campground/Index", {camps: campGrounds, currentUser: req.user})
     });
 });
